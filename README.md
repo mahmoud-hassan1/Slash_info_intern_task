@@ -17,3 +17,10 @@ MyFlutterApp is a cross-platform application developed using the Flutter framewo
 ### Installation
 - Clone the repository
 - Install dependencies: flutter pub get
+## Project Dependencies
+ - google_fonts: ^6.2.1
+ - flutter_svg: ^2.0.10+1
+ - flutter_bloc: ^8.1.6
+ - bloc: ^8.1.4
+ - carousel_slider: ^4.2.1
+ - device_preview: ^1.2.0
