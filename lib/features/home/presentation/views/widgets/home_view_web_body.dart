@@ -7,6 +7,7 @@ import 'package:slash_info_task/features/home/presentation/views/widgets/custom_
 import 'package:slash_info_task/features/home/presentation/views/widgets/custom_web_app_bar.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/offers_list_view.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/products_section.dart';
+import 'package:slash_info_task/features/home/presentation/views/widgets/products_web_section.dart';
 class HomeViewWebBody extends StatelessWidget {
   const HomeViewWebBody({super.key});
   @override
@@ -30,7 +31,7 @@ class HomeViewWebBody extends StatelessWidget {
                     SizedBox(height: 8,),
                     CategorySection(),
                     SizedBox(height: 16,),
-                    ProductsSection()
+                    ProductsWebSection()
                   ],
                 ),
               ),
