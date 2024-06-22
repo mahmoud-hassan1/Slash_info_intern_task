@@ -18,7 +18,7 @@ class NewArrivalSection extends StatelessWidget {
          const SizedBox(
           height: 16,
         ),
-        ProductListView()
+        ProductListView(products: BlocProvider.of<ProductCubit>(context).newArrival!,)
       ],
     );
   }
