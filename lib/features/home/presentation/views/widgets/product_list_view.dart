@@ -15,11 +15,12 @@ final List<Product>products;
     
       child: ListView.separated(
           scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) =>  ProductLIstViewItem(product:products[index]),
+          itemBuilder: (context, index) =>  ProductListViewItem(product:products[index]),
           separatorBuilder: (context, index) => const SizedBox(
                 width: 16,
               ),
           itemCount: products.length,),
+          
     );
   }
 }
