@@ -12,32 +12,35 @@ class HomeViewWebBody extends StatelessWidget {
   const HomeViewWebBody({super.key});
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<ProductCubit>(context).fetchProduct();
+
     return const SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: Column(
-          children: [
-            CustomWebAppBar(),
-            SizedBox(height: 8),
-            CustomSearchBar(),
-            SizedBox(height: 8,),
-            Expanded(
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    OffersListView(),
-                    SizedBox(height: 8,),
-                    CategorySection(),
-                    SizedBox(height: 16,),
-                    ProductsWebSection()
-                  ],
-                ),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: CustomWebAppBar(),
+          ),
+          SizedBox(height: 8),
+          Padding(
+           padding: EdgeInsets.symmetric(horizontal: 16),
+            child: CustomSearchBar(),
+          ),
+          SizedBox(height: 8,),
+          Expanded(
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  OffersListView(),
+                  SizedBox(height: 8,),
+                  CategorySection(),
+                  SizedBox(height: 16,),
+                  ProductsWebSection()
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
