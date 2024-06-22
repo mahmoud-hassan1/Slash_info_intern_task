@@ -11,12 +11,15 @@ class CategoryListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
      height: 100,
-      child: ListView.separated(
-       physics: const BouncingScrollPhysics(),
-       scrollDirection: Axis.horizontal,
-       itemBuilder: (context, index) =>  CategoryListViewItem(index: index,),
-       separatorBuilder: (context, index) => const SizedBox(width: 5,),
-        itemCount: Assets.kCategories.length),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 16.0),
+        child: ListView.separated(
+         physics: const BouncingScrollPhysics(),
+         scrollDirection: Axis.horizontal,
+         itemBuilder: (context, index) =>  CategoryListViewItem(index: index,),
+         separatorBuilder: (context, index) => const SizedBox(width: 5,),
+          itemCount: Assets.kCategories.length),
+      ),
     );
   }
 }

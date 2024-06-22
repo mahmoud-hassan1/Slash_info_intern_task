@@ -52,7 +52,7 @@ class CustomWebAppBar extends StatelessWidget {
                   fontWeight: FontWeight.w500
                 ),
               )),
-              SizedBox(width: 32,),
+             const SizedBox(width: 32,),
               
           SvgPicture.asset('assets/images/location.svg'),
           const SizedBox(

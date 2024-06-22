@@ -10,17 +10,19 @@ class ProductListView extends StatelessWidget {
 final List<Product>products;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-    
-      child: ListView.separated(
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (context, index) =>  ProductListViewItem(product:products[index]),
-          separatorBuilder: (context, index) => const SizedBox(
-                width: 16,
-              ),
-          itemCount: products.length,),
-          
+    return Padding(
+      padding: const EdgeInsets.only(left: 16),
+      child: SizedBox(
+        height: 200,
+        child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) =>  ProductListViewItem(product:products[index]),
+            separatorBuilder: (context, index) => const SizedBox(
+                  width: 16,
+                ),
+            itemCount: products.length,),
+            
+      ),
     );
   }
 }
