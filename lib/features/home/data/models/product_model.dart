@@ -1,7 +1,6 @@
 import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
 class ProductModel extends Product {
-  ProductModel({required int id, required String name, required double price, required String image})
-      : super(id: id, name: name, price: price, image: image);
+  ProductModel({required super.id, required super.name, required super.price, required super.image});
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
