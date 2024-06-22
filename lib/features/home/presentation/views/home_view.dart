@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/home_view_mobile_body.dart';
+import 'package:slash_info_task/features/home/presentation/views/widgets/home_view_web_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: const HomeViewMobileBody(),
-      bottomNavigationBar: BottomNavigationBar(
+      body: width<=700? const HomeViewMobileBody():const HomeViewWebBody(),
+      bottomNavigationBar: width<=700? BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_rounded)  ,
@@ -38,7 +39,7 @@ class HomeView extends StatelessWidget {
 
         selectedLabelStyle:  FontStyles.kSmallTextStyle(context).copyWith(fontWeight: FontWeight.w700), 
         unselectedLabelStyle: FontStyles.kSmallTextStyle(context), 
-      ),
+      ):const SizedBox(),
     );
   }
 }

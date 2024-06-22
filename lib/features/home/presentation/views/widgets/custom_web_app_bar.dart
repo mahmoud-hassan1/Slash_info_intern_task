@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+class CustomWebAppBar extends StatelessWidget {
+  const CustomWebAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,31 +16,26 @@ class CustomAppBar extends StatelessWidget {
                 "Home",
                 style: FontStyles.kMediumTextStyle(context).copyWith(
                   decoration: TextDecoration.underline,
+                  fontWeight: FontWeight.w900
                 ),
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Favorite",
-                style: FontStyles.kMediumTextStyle(context).copyWith(
-                  decoration: TextDecoration.underline,
-                ),
+                style: FontStyles.kMediumTextStyle(context)
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Cart",
-                style: FontStyles.kMediumTextStyle(context).copyWith(
-                  decoration: TextDecoration.underline,
-                ),
+                style: FontStyles.kMediumTextStyle(context)
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Profile",
-                style: FontStyles.kMediumTextStyle(context).copyWith(
-                  decoration: TextDecoration.underline,
-                ),
+                style: FontStyles.kMediumTextStyle(context)
               ))
         ],
       ),
@@ -51,7 +46,7 @@ class CustomAppBar extends StatelessWidget {
             style: FontStyles.kMediumTextStyle(context),
           ),
           const SizedBox(
-            width: 16,
+            width: 32,
           ),
           SvgPicture.asset('assets/images/location.svg'),
           const SizedBox(
