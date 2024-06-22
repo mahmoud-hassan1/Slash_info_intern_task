@@ -14,6 +14,7 @@ class OffersListViewState extends State<OffersListView> {
 
   @override
   Widget build(BuildContext context) {
+    double width =MediaQuery.of(context).size.width;
     return Column(
       children: [
         CarouselSlider.builder(
@@ -22,7 +23,7 @@ class OffersListViewState extends State<OffersListView> {
             return const OffersListViewItem(); // Your custom list item widget
           },
           options: CarouselOptions(
-            height: 170,
+            height: (width*.35).clamp(0, 270),
             autoPlay: true,
             enlargeCenterPage: true,
             viewportFraction: 0.88,
