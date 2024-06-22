@@ -6,8 +6,7 @@ import 'package:slash_info_task/features/home/domain/repositories/product_reposi
 class ProductRepoImplementation implements ProductRepository {
   final ProductDataSource localDataSource;
  Map<String,List<ProductModel>>? products;
-ProductRepoImplementation(this.localDataSource,) {
-}
+ProductRepoImplementation(this.localDataSource,) ;
 
 // Asynchronous initialization method
 Future<void> initProducts() async {

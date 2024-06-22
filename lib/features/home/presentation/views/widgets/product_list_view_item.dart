@@ -1,16 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:slash_info_task/core/utiles/colors.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
 import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
 
 class ProductLIstViewItem extends StatelessWidget {
-  ProductLIstViewItem({
+ const ProductLIstViewItem({
     super.key,
     required this.product,
   });
-  Product product;
+ final Product product;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

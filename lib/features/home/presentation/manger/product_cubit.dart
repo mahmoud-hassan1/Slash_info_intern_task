@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
+
 import 'package:slash_info_task/features/home/data/repositories/product_repo_impl.dart';
 import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
 
@@ -14,7 +15,7 @@ class ProductCubit extends Cubit<ProductState> {
   void fetchProduct() async{
     emit(ProductLoading());
     try{
-      print("starting");
+      
       await prductRepo.initProducts();
    bestSelling=await prductRepo.getBestSellingProducts();
     newArrival=await prductRepo.getNewArrivals();
@@ -23,7 +24,6 @@ class ProductCubit extends Cubit<ProductState> {
     }
     catch(e){
       emit(ProductFailed());
-      print(e);
     }
   }
 }

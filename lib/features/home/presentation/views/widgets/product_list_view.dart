@@ -3,11 +3,11 @@ import 'package:slash_info_task/features/home/domain/entities/product_entity.dar
 import 'package:slash_info_task/features/home/presentation/views/widgets/product_list_view_item.dart'; 
 
 class ProductListView extends StatelessWidget {
-   ProductListView({
+  const ProductListView({
     super.key,
     required this.products
   });
-List<Product>products;
+final List<Product>products;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

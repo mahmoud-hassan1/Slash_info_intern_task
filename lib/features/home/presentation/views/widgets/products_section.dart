@@ -28,10 +28,10 @@ class ProductsSection extends StatelessWidget {
         );
         }
         else if(state is ProductLoading){
-          return Center(child: Text("Loading"),);
+          return const Center(child: Text("Loading"),);
         }
         else{
-          return Center(child: Text("Error",style: TextStyle(fontSize: 50,color: Colors.black),),);
+          return const Center(child: Text("Error",style: TextStyle(fontSize: 50,color: Colors.black),),);
         }
       },
     );

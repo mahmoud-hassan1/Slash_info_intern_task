@@ -13,7 +13,7 @@ class ProductDataSource {
       "recommendedForYou" : recommend,
       
     };
-    print("got products");
+
     return products;
   }
 }

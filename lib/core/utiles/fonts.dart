@@ -18,18 +18,6 @@ abstract class FontStyles{
  ) ;
  
 }
-
-
- TextStyle styleDateTransactionHistory(BuildContext context) {
-    return TextStyle(
-      color: Color(0xffAAAAAA),
-      fontSize: getResponsiveFontSize(context, fontSize: 16),
-      fontFamily: 'Montserrat',
-      fontWeight: FontWeight.w500,
-    );
-  }
-
-
 double getResponsiveFontSize(context,{required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
@@ -46,13 +34,11 @@ double getResponsiveFontSize(context,{required double fontSize}) {
 
   double width = MediaQuery.sizeOf(context).width;
   if (width > 800) {
-    print("large");
+
     return width /700;
   } else if (width > 500) {
-    print("medium");
     return width / 450;
   } else {
-    print("small");
     return width /500 ;
   }
 }

@@ -3,12 +3,12 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/category_section.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/custom_app_bar.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/custom_search_bar.dart';
+import 'package:slash_info_task/features/home/presentation/views/widgets/custom_web_app_bar.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/offers_list_view.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/products_section.dart';
-class HomeViewMobileBody extends StatelessWidget {
-  const HomeViewMobileBody({super.key});
+class HomeViewWebBody extends StatelessWidget {
+  const HomeViewWebBody({super.key});
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<ProductCubit>(context).fetchProduct();
@@ -17,7 +17,7 @@ class HomeViewMobileBody extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           children: [
-            CustomAppBar(),
+            CustomWebAppBar(),
             SizedBox(height: 8),
             CustomSearchBar(),
             SizedBox(height: 8,),
