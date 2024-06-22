@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
+import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/home_view_mobile_body.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/home_view_web_body.dart';
 
@@ -8,25 +11,26 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BlocProvider.of<ProductCubit>(context).fetchProduct();
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       body: width<=700? const HomeViewMobileBody():const HomeViewWebBody(),
       bottomNavigationBar: width<=700? BottomNavigationBar(
-        items: const [
+        items:  [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded)  ,
+            icon: SvgPicture.asset('assets/images/home.svg')  ,
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border_outlined),
-            label: 'Favorite',
+            icon: SvgPicture.asset('assets/images/favorite.svg'),
+            label: 'Favourite',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: SvgPicture.asset('assets/images/shopping-cart.svg'),
             label: 'Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_outlined),
+            icon: SvgPicture.asset('assets/images/profile-circle.svg'),
             label: 'Profile',
           ),
         ],
