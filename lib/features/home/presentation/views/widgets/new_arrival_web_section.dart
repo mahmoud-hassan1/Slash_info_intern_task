@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/header_titles.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/product_grid_view_item.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/product_list_view.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/product_web_grid_view.dart';
 
 class NewArrivalWebSection extends StatelessWidget {

@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/header_titles.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/product_list_view.dart';
+
 import 'package:slash_info_task/features/home/presentation/views/widgets/product_web_grid_view.dart';
 
 class BestSellerWebSection extends StatelessWidget {
@@ -12,7 +12,7 @@ class BestSellerWebSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print("hello web");
+  
     return  Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [

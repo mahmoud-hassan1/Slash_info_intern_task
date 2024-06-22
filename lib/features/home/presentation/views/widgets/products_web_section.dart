@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
 import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/best_seller_section.dart';
+
 import 'package:slash_info_task/features/home/presentation/views/widgets/best_seller_web_section.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/new_arival_section.dart';
+
 import 'package:slash_info_task/features/home/presentation/views/widgets/new_arrival_web_section.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/recommended_section.dart';
+
 import 'package:slash_info_task/features/home/presentation/views/widgets/recommended_web_section.dart';
 
 class ProductsWebSection extends StatelessWidget {

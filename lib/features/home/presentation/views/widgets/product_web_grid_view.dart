@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/product_grid_view_item.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/product_list_view_item.dart'; 
+
 
 class ProductWebGridView extends StatelessWidget {
   const ProductWebGridView({

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:slash_info_task/core/utiles/colors.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
 import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
