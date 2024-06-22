@@ -17,7 +17,7 @@ class CategoryListViewItem extends StatelessWidget {
         SvgPicture.asset(Assets.kCategories[index][1],),
         Text(
          Assets.kCategories[index][0],
-         style: FontStyles.kSmallTextStyle,
+         style: FontStyles.kSmallTextStyle(context),
          )
       ],
     );

@@ -7,8 +7,8 @@ import 'package:slash_info_task/features/home/presentation/views/widgets/custom_
 import 'package:slash_info_task/features/home/presentation/views/widgets/custom_search_bar.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/offers_list_view.dart';
 import 'package:slash_info_task/features/home/presentation/views/widgets/products_section.dart';
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class HomeViewMobileBody extends StatelessWidget {
+  const HomeViewMobileBody({super.key});
   @override
   Widget build(BuildContext context) {
     BlocProvider.of<ProductCubit>(context).fetchProduct();
@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
             CustomAppBar(),
             SizedBox(height: 8),
             CustomSearchBar(),
-             SizedBox(height: 8,),
+            SizedBox(height: 8,),
             Expanded(
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),

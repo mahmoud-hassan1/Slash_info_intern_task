@@ -3,13 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:slash_info_task/core/utiles/colors.dart';
 import 'package:slash_info_task/features/home/data/datasources/product_data_source.dart';
 import 'package:slash_info_task/features/home/data/repositories/product_repo_impl.dart';
-import 'package:slash_info_task/features/home/domain/entities/product_entity.dart';
 import 'package:slash_info_task/features/home/presentation/manger/product_cubit.dart';
 import 'package:slash_info_task/features/home/presentation/views/home_view.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:device_preview/device_preview.dart';
+
+void main() => runApp(
+  DevicePreview(
+    enabled: false,
+    builder: (context) => MyApp(), // Wrap your app
+  ),
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -20,6 +24,9 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => ProductCubit(prductRepo: ProductRepoImplementation(ProductDataSource())),
       child: MaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
         theme: ThemeData.light()
             .copyWith(scaffoldBackgroundColor: ColorStyles.kBackgroundColor),
         debugShowCheckedModeBanner: false,

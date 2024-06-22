@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget  {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children:[ Text(
         "Slash.",
-        style: FontStyles.kMediumTextStyle,
+        style: FontStyles.kMediumTextStyle(context),
       ),
      Row(
         children: [
@@ -21,11 +21,11 @@ class CustomAppBar extends StatelessWidget  {
             children: [
               Text(
                 "Nasr City",
-                style: FontStyles.kSmallTextStyle,
+                style: FontStyles.kSmallTextStyle(context),
               ),
                Text(
                 "Cairo",
-                style: FontStyles.kSmallTextStyle.copyWith(fontWeight: FontWeight.w700),
+                style: FontStyles.kSmallTextStyle(context).copyWith(fontWeight: FontWeight.w700),
               )
             ],
           ),

@@ -1,19 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 abstract class FontStyles{
- static final TextStyle kLargeTextStyle =GoogleFonts.urbanist().copyWith(
+ static  TextStyle kLargeTextStyle (BuildContext context)=>GoogleFonts.urbanist().copyWith(
   color:  Colors.black,
   fontWeight: FontWeight.w600,
-  fontSize: 25,
+  fontSize: getResponsiveFontSize(context,fontSize: 26),
  ) ;
-  static final TextStyle kMediumTextStyle =GoogleFonts.urbanist().copyWith(
+  static  TextStyle kMediumTextStyle(BuildContext context)=>GoogleFonts.urbanist().copyWith(
   color:  Colors.black,
   fontWeight: FontWeight.w700,
-  fontSize: 22,
+  fontSize: getResponsiveFontSize(context,fontSize: 22),
  ) ;
-  static final TextStyle kSmallTextStyle =GoogleFonts.urbanist().copyWith(
+  static TextStyle kSmallTextStyle (BuildContext context)=>GoogleFonts.urbanist().copyWith(
   color:  Colors.black,
   fontWeight: FontWeight.w500,
-  fontSize: 14,
+  fontSize: getResponsiveFontSize(context,fontSize: 16),
  ) ;
+ 
+}
+
+
+ TextStyle styleDateTransactionHistory(BuildContext context) {
+    return TextStyle(
+      color: Color(0xffAAAAAA),
+      fontSize: getResponsiveFontSize(context, fontSize: 16),
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w500,
+    );
+  }
+
+
+double getResponsiveFontSize(context,{required double fontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+
+  double lowerLimit = fontSize * 0.8;
+  double upperLimit = fontSize * 1.2;
+
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
+}double getScaleFactor(context) {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalwidth = dispatcher.views.first.physicalSize.width;
+  // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  // double width = devicePixelRatio / physicalwidth;
+
+  double width = MediaQuery.sizeOf(context).width;
+  if (width > 800) {
+    print("large");
+    return width /700;
+  } else if (width > 500) {
+    print("medium");
+    return width / 450;
+  } else {
+    print("small");
+    return width /500 ;
+  }
 }

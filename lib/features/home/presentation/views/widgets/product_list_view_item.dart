@@ -54,7 +54,7 @@ class ProductLIstViewItem extends StatelessWidget {
           ),
           Text(
             product.name,
-            style: FontStyles.kSmallTextStyle.copyWith(fontSize: 14),
+            style: FontStyles.kSmallTextStyle(context).copyWith(fontSize: 14),
           ),
           Row(
             crossAxisAlignment:
@@ -63,7 +63,7 @@ class ProductLIstViewItem extends StatelessWidget {
               Expanded(
                 child: Text(
                   "EGP ${product.price}",
-                  style: FontStyles.kMediumTextStyle.copyWith(fontSize: 16),
+                  style: FontStyles.kMediumTextStyle(context).copyWith(fontSize: 16),
                   overflow:
                       TextOverflow.ellipsis, 
                 ),

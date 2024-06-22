@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:slash_info_task/core/utiles/fonts.dart';
-import 'package:slash_info_task/features/home/presentation/views/widgets/home_vie_body.dart';
+import 'package:slash_info_task/features/home/presentation/views/widgets/home_view_mobile_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const HomeViewBody(),
+      body: const HomeViewMobileBody(),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
@@ -36,8 +36,8 @@ class HomeView extends StatelessWidget {
         showUnselectedLabels: true,
         showSelectedLabels: true,
 
-        selectedLabelStyle:  FontStyles.kSmallTextStyle.copyWith(fontWeight: FontWeight.w700), 
-        unselectedLabelStyle: FontStyles.kSmallTextStyle, 
+        selectedLabelStyle:  FontStyles.kSmallTextStyle(context).copyWith(fontWeight: FontWeight.w700), 
+        unselectedLabelStyle: FontStyles.kSmallTextStyle(context), 
       ),
     );
   }

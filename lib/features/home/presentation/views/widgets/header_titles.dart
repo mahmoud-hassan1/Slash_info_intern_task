@@ -14,12 +14,12 @@ final String title;
       children: [
         Text(
           title,
-          style: FontStyles.kLargeTextStyle,
+          style: FontStyles.kLargeTextStyle(context).copyWith(fontSize: 24),
         ),
         const Spacer(),
         Text(
           "See all",
-          style: FontStyles.kSmallTextStyle,
+          style: FontStyles.kSmallTextStyle(context),
           ),
           const SizedBox(width: 8,),
           Container(
