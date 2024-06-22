@@ -14,7 +14,7 @@ abstract class FontStyles{
   static TextStyle kSmallTextStyle (BuildContext context)=>GoogleFonts.urbanist().copyWith(
   color:  Colors.black,
   fontWeight: FontWeight.w500,
-  fontSize: getResponsiveFontSize(context,fontSize: 16),
+  fontSize: getResponsiveFontSize(context,fontSize: 15),
  ) ;
  
 }
