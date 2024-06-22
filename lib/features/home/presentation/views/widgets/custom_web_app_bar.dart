@@ -8,46 +8,52 @@ class CustomWebAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+    
+          Text(
+            "Slash.",
+            style: FontStyles.kMediumTextStyle(context),
+          ),
       Row(
         children: [
-          TextButton(
+           TextButton(
               onPressed: () {},
               child: Text(
                 "Home",
                 style: FontStyles.kMediumTextStyle(context).copyWith(
                   decoration: TextDecoration.underline,
-                  fontWeight: FontWeight.w900
+                  fontWeight: FontWeight.w500,
+                  color: Colors.blue
                 ),
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Favorite",
-                style: FontStyles.kMediumTextStyle(context)
+                style: FontStyles.kMediumTextStyle(context).copyWith(
+             
+                  fontWeight: FontWeight.w500
+                ),
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Cart",
-                style: FontStyles.kMediumTextStyle(context)
+                style: FontStyles.kMediumTextStyle(context).copyWith(
+                  
+                  fontWeight: FontWeight.w500
+                ),
               )),
                   TextButton(
               onPressed: () {},
               child: Text(
                 "Profile",
-                style: FontStyles.kMediumTextStyle(context)
-              ))
-        ],
-      ),
-      Row(
-        children: [
-          Text(
-            "Slash.",
-            style: FontStyles.kMediumTextStyle(context),
-          ),
-          const SizedBox(
-            width: 32,
-          ),
+                style: FontStyles.kMediumTextStyle(context).copyWith(
+                
+                  fontWeight: FontWeight.w500
+                ),
+              )),
+              SizedBox(width: 32,),
+              
           SvgPicture.asset('assets/images/location.svg'),
           const SizedBox(
             width: 8,
@@ -63,16 +69,19 @@ class CustomWebAppBar extends StatelessWidget {
                 "Cairo",
                 style: FontStyles.kSmallTextStyle(context)
                     .copyWith(fontWeight: FontWeight.w700),
-              )
-            ],
-          ),
+              ),
           const SizedBox(
             width: 8,
           ),
-          const Icon(Icons.keyboard_arrow_down)
+            ],
+          ),
+          const Icon(Icons.keyboard_arrow_down),
+          const SizedBox(
+            width: 32,
+          ),
+      SvgPicture.asset('assets/images/Notifcation Icon.svg')
         ],
       ),
-      SvgPicture.asset('assets/images/Notifcation Icon.svg')
     ]);
   }
 }
